@@ -16,7 +16,7 @@ import {
 } from "./types"
 
 export class QuickJSAsyncRuntime extends QuickJSRuntime {
-  public context: QuickJSAsyncContext | undefined
+  // public context: QuickJSAsyncContext | undefined
 
   /** @private */
   protected declare module: QuickJSAsyncEmscriptenModule

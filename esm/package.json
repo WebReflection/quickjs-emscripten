@@ -1,0 +1,23 @@
+{
+  "name": "@webreflection/quickjs-emscripten",
+  "version": "0.0.1",
+  "author": "Jake Teton-Landis",
+  "type": "module",
+  "description": "quickjs-emscripten as Web compatible ESM module",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebReflection/quickjs-emscripten.git"
+  },
+  "keywords": [
+    "quickjs",
+    "esm",
+    "emscripten",
+    "wasm"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WebReflection/quickjs-emscripten/issues"
+  },
+  "homepage": "https://github.com/WebReflection/quickjs-emscripten#readme"
+}

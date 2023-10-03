@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickJS</title>
+  <script type="module">
+    import { getQuickJS } from 'https://esm.run/@webreflection/quickjs-emscripten';
+    const QuickJS = await getQuickJS();
+    const vm = QuickJS.newContext();
+    const world = vm.newString("world");
+    vm.setProp(vm.global, "NAME", world);
+    world.dispose();
+
+    const result = vm.evalCode(`"Hello " + NAME + "!"`);
+    if (result.error) {
+      console.log("Execution failed:", vm.dump(result.error));
+      result.error.dispose();
+    } else {
+      console.log("Success:", vm.dump(result.value));
+      result.value.dispose();
+    }
+    vm.dispose();
+  </script>
+</head>
+</html>
